@@ -1,0 +1,21 @@
+!Job
+target: !Target
+  head: d07f30ada67780251e3f053aaf4dd32eb6450cec
+  email: jc.github@rediffmail.com
+  branch: master
+  remote: https://github.com/uccross/arrow
+  version: 2.1.0.dev1532
+  no_rc_version: 2.1.0.dev1532
+  no_rc_semver_version: 2.1.0-dev1532
+tasks:
+  homebrew-cpp: !Task
+    ci: github
+    template: homebrew-formulae/github.macos.yml
+    artifacts: []
+    params:
+      formula: apache-arrow.rb
+
+    branch: build-2-github-homebrew-cpp
+    commit: 9ff503296126489d5ad90bbb45da0ba124c2301a
+params: {}
+branch: build-2
