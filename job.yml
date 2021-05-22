@@ -1,0 +1,92 @@
+!Job
+target: !Target
+  head: 832aaee22f31db11e58f7c482e758053e9cfcecc
+  email: jc.github@rediffmail.com
+  branch: arrow-master
+  remote: https://github.com/uccross/arrow
+  version: 2.1.0.dev1534
+  no_rc_version: 2.1.0.dev1534
+  no_rc_semver_version: 2.1.0-dev1534
+tasks:
+  ubuntu-focal-amd64: !Task
+    ci: github
+    template: linux-packages/github.linux.amd64.yml
+    artifacts:
+    - apache-arrow-apt-source_2.1.0.dev1534-1.debian.tar.xz
+    - apache-arrow-apt-source_2.1.0.dev1534-1.dsc
+    - apache-arrow-apt-source_2.1.0.dev1534-1_all.deb
+    - apache-arrow-apt-source_2.1.0.dev1534.orig.tar.gz
+    - apache-arrow_2.1.0.dev1534-1.debian.tar.xz
+    - apache-arrow_2.1.0.dev1534-1.dsc
+    - apache-arrow_2.1.0.dev1534.orig.tar.gz
+    - gir1.2-arrow-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - gir1.2-arrow-dataset-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - gir1.2-gandiva-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - gir1.2-parquet-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dataset-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dataset-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dataset-glib-doc_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dataset-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-dataset-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dataset500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-dataset500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-flight-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-flight500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-flight500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-glib-doc_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-python-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-python-flight-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-python-flight500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-python-flight500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-python500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-python500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libgandiva-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libgandiva-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libgandiva-glib-doc_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libgandiva-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libgandiva-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libgandiva500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libgandiva500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libparquet-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libparquet-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libparquet-glib-doc_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libparquet-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libparquet-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libparquet500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libparquet500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - gir1.2-arrow-cuda-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - gir1.2-plasma-1.0_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-cuda-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-cuda-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-cuda-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-cuda-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libarrow-cuda500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libarrow-cuda500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libplasma-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libplasma-glib-dev_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libplasma-glib-doc_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libplasma-glib500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libplasma-glib500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - libplasma500-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - libplasma500_2.1.0.dev1534-1_[a-z0-9]+.deb
+    - plasma-store-server-dbgsym_2.1.0.dev1534-1_[a-z0-9]+.d?deb
+    - plasma-store-server_2.1.0.dev1534-1_[a-z0-9]+.deb
+    params:
+      target: ubuntu-focal
+      task_namespace: apt
+      upload_extensions:
+      - .ddeb
+      - .deb
+      - .debian.tar.xz
+      - .dsc
+      - .orig.tar.gz
+    branch: build-5-github-ubuntu-focal-amd64
+    commit: 5151b8c195be30ec83e40e48b1ef46730acd9fd2
+params: {}
+branch: build-5
