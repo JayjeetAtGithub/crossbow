@@ -1,0 +1,23 @@
+!Job
+target: !Target
+  head: d07f30ada67780251e3f053aaf4dd32eb6450cec
+  email: jc.github@rediffmail.com
+  branch: master
+  remote: https://github.com/uccross/arrow
+  version: 2.1.0.dev1532
+  no_rc_version: 2.1.0.dev1532
+  no_rc_semver_version: 2.1.0-dev1532
+tasks:
+  test-debian-10-cpp: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        DEBIAN: 10
+      image: debian-cpp
+
+    branch: build-0-github-test-debian-10-cpp
+    commit: a708f195fea77a009a8291e3c625bcc09c73237e
+params: {}
+branch: build-0
