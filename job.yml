@@ -1,0 +1,24 @@
+!Job
+target: !Target
+  head: 7cd397d61a86fd0e78a5f12d72318e016a483832
+  email: jc.github@rediffmail.com
+  branch: skyhook/use_unique_ptr
+  remote: https://github.com/uccross/arrow
+  version: 3.0.0.dev2431
+  no_rc_version: 3.0.0.dev2431
+  no_rc_semver_version: 3.0.0-dev2431
+tasks:
+  test-skyhook-integration: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        UBUNTU: 20.04
+      flags: -e ARROW_SKYHOOK=ON
+      image: ubuntu-cpp
+
+    branch: build-12-github-test-skyhook-integration
+    commit: 747f59589895c97b6ec75497ea4224c312ddc17e
+params: {}
+branch: build-12
