@@ -1,0 +1,24 @@
+!Job
+target: !Target
+  head: 09e9ba36d3744ca97f944e13d9426f94fad39087
+  email: jc.github@rediffmail.com
+  branch: bugfix/remove-privileged-ci
+  remote: https://github.com/uccross/arrow
+  version: 3.0.0.dev2573
+  no_rc_version: 3.0.0.dev2573
+  no_rc_semver_version: 3.0.0-dev2573
+tasks:
+  test-skyhook-integration: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        UBUNTU: 20.04
+      flags: -e ARROW_SKYHOOK=ON --cap-add SYS_ADMIN --device /dev/fuse
+      image: ubuntu-cpp
+
+    branch: build-20-github-test-skyhook-integration
+    commit: 93ef95b112487799a1284c9db29c816d7937c7b5
+params: {}
+branch: build-20
