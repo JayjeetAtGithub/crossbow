@@ -1,0 +1,25 @@
+!Job
+target: !Target
+  head: 03756011809fa15bbd7c4ec7051f9e8ba2406e04
+  email: jc.github@rediffmail.com
+  branch: add-skyhook-example
+  remote: https://github.com/uccross/arrow
+  github_repo: uccross/arrow
+  version: 3.0.0.dev3389
+  no_rc_version: 3.0.0.dev3389
+  no_rc_semver_version: 3.0.0-dev3389
+tasks:
+  test-skyhook-integration: !Task
+    ci: github
+    template: docker-tests/github.linux.yml
+    artifacts: []
+    params:
+      env:
+        UBUNTU: 20.04
+      flags: -e ARROW_SKYHOOK=ON
+      image: ubuntu-cpp
+
+    branch: build-31-github-test-skyhook-integration
+    commit: 0447b70c4d62353c1f17b37a7bf05733306b5a54
+params: {}
+branch: build-31
